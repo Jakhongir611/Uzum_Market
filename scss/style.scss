@@ -54,12 +54,14 @@
             .language {
                 display: flex;
                 align-items: center;
-                .flag_rus{
+
+                .flag_rus {
                     display: flex;
                     align-items: center;
                     gap: 5px;
                 }
-                .flag_uzb{
+
+                .flag_uzb {
                     display: flex;
                     align-items: center;
                     gap: 5px;
@@ -455,7 +457,44 @@
     }
 }
 
+.my_city {
+    width: 740px;
+    height: fit-content;
+    margin: 0 auto;
+    background: red;
 
+    &_top {
+        padding: 24px 40px 12px;
+        display: flex;
+        flex-direction: column;
+        .my_city_header {
+            font-size: 22px;
+            font-weight: 500;
+            text-align: center;
+        }
+        .my_city_title {
+            margin-top: 24px;
+            font-size: 18px;
+            font-weight: 400;
+            text-align: center;
+        }
+        input{
+            width: 660px;
+            height: 40px;
+            padding: 0 20px;
+            margin-top: 16px;
+        }
+    }
+
+    &_bottom {
+        padding: 0 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 40px;
+        grid-auto-flow: row;
+        margin-bottom: 12px;
+    }
+}
 
 
 
@@ -498,6 +537,7 @@
     right: 26px;
     bottom: 26px;
 }
-.none{
+
+.none {
     display: none;
 }
