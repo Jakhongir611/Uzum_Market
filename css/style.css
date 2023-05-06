@@ -162,6 +162,8 @@
   height: 413px;
   border-radius: 15px;
   overflow: hidden;
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 .container main .sliders .swiper {
   width: 100%;
@@ -388,43 +390,86 @@
   margin-left: auto;
 }
 
-.my_city {
+.my_city_modal {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.47);
+  position: fixed;
+  z-index: 20;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+}
+.my_city_modal .my_city {
   width: 740px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   margin: 0 auto;
-  background: red;
+  border-radius: 5px;
+  margin-bottom: 35px;
+  position: relative;
+  background: #fff;
 }
-.my_city_top {
+.my_city_modal .my_city_top {
   padding: 24px 40px 12px;
   display: flex;
   flex-direction: column;
 }
-.my_city_top .my_city_header {
+.my_city_modal .my_city_top .my_city_header {
   font-size: 22px;
   font-weight: 500;
   text-align: center;
 }
-.my_city_top .my_city_title {
+.my_city_modal .my_city_top .my_city_title {
   margin-top: 24px;
   font-size: 18px;
   font-weight: 400;
   text-align: center;
 }
-.my_city_top input {
+.my_city_modal .my_city_top input {
   width: 660px;
   height: 40px;
   padding: 0 20px;
   margin-top: 16px;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #f7f7f7;
+  color: rgba(0, 0, 0, 0.54);
+  font-weight: 500;
 }
-.my_city_bottom {
+.my_city_modal .my_city_bottom {
   padding: 0 40px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 40px;
   grid-auto-flow: row;
   margin-bottom: 12px;
+}
+.my_city_modal .my_city_bottom .city_title {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  justify-items: center;
+  justify-content: center;
+  text-align: left;
+  cursor: pointer;
+  height: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: content-box;
+  margin-top: 4px;
+  padding-left: 16px;
+}
+.my_city_modal .my_city_bottom .city_title span {
+  font-size: 12.8px;
+  color: #757575;
+}
+.my_city_modal .my_city .x {
+  cursor: pointer;
+  border: none;
+  background: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 16px;
+  right: 16px;
 }
 
 .anchor {
