@@ -28,11 +28,11 @@ let log_in_x = doc.querySelector('.log_in_x');
 
 location_span.addEventListener('click', () => {
   my_city_modal.classList.remove('none');
-  container.style.overflow = 'hidden'
+  body.style.overflow = 'hidden'
 })
 my_city_x.addEventListener('click', () => {
   my_city_modal.classList.add('none');
-  container.style.overflow = 'auto'
+  body.style.overflow = 'auto'
 })
 
 city_title.forEach(item => {
