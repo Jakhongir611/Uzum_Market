@@ -8,6 +8,7 @@
     <title>Uzum Market</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="./img/favicon-32.webp">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 </head>
 
@@ -29,18 +30,19 @@
                 <div>Вопрос-ответ</div>
                 <div>Мои заказы</div>
                 <div class="language">
-                    <div class="flag_rus">
-                        <img id="flag" src="./img/Flag_of_Russia.jpg" alt=""> <span class="lang_reg">Русский</span>
+                    <div class="flag_rus flag">
+                        <img id="flag_rus" src="./img/Flag_of_Russia.jpg" alt="">
+                        <span class="lang_reg">Русский</span>
                     </div>
-                    <div class="flag_usb none ">
-                        <img src="./img/Flag_of_Uzbekistan.jpg" alt=""> <span class="lang_reg">Узбекистан</span>
+                    <div class="flag_uzb flag flag_block none">
+                        <img id="flag_uzb" src="./img/Flag_of_Uzbekistan.jpg" alt="">
+                        <span class="lang_reg">O'zbekcha</span>
                     </div>
                 </div>
 
             </div>
         </div>
     </div>
-
     <div class="my_city_modal none">
         <div class="my_city">
             <div class="my_city_top">
@@ -162,6 +164,7 @@
     </div>
 
 
+
     <div class="container">
         <header class="header">
             <div class="header_top">
@@ -169,7 +172,7 @@
                     <img src="./img/logo_uzum.svg" alt="">
                 </div>
                 <div class="catalog">
-                    <img src="./img/catalog-icon.png" width="24" alt=""> Каталог
+                    <img class="catalog_img" src="./img/catalog-icon.png" width="24" alt=""> Каталог
                 </div>
                 <div class="search">
                     <input class="search_input" type="text" placeholder="Искать товары и категории">
@@ -199,7 +202,51 @@
                 <div><a href="">Строительство и ремонт</a></div>
                 <div><a href="">Автотовары</a></div>
                 <div><a href="">Детские товары</a></div>
-                <button>Ещё <img src="./img/arrow_down.png" alt=""></button>
+                <button class="menu_more">Ещё <img src="./img/arrow_down.png" alt=""></button>
+            </div>
+            <div class="extra_menu none">
+                <div class="extra_menu_left">
+                    <div class="catalog_item"><img src="./img/Frameelectronics.svg" alt=""> Электроника <img
+                            class="arrow_rights" src="./img/arrow_right.svg" alt=""></div>
+                    <div class="catalog_item"><img src="./img/Frametechnique.svg" alt=""> Бытовая техника <img
+                            class="arrow_rights" src="./img/arrow_right.svg" alt=""></div>
+                    <div class="catalog_item"><img src="./img/Framecloth.svg" alt=""> Одежда <img class="arrow_rights"
+                            src="./img/arrow_right.svg" alt=""></div>
+                    <div class="catalog_item"><img src="./img/Frameshoes.svg" alt=""> Обувь <img class="arrow_rights"
+                            src="./img/arrow_right.svg" alt=""></div>
+                    <div class="catalog_item"><img src="./img/Frameaccessories.svg" alt=""> Аксессуары <img
+                            class="arrow_rights" src="./img/arrow_right.svg" alt=""></div>
+                    <div class="catalog_item"><img src="./img/Framebeauty.svg" alt=""> Красота <img class="arrow_rights"
+                            src="./img/arrow_right.svg" alt=""></div>
+                    <div class="catalog_item"><img src="./img/Framehealth.svg" alt=""> Здоровье <img
+                            class="arrow_rights" src="./img/arrow_right.svg" alt=""></div>
+                    <div class="catalog_item"><img src="./img/Framehouse.svg" alt=""> Товары для дома <img
+                            class="arrow_rights" src="./img/arrow_right.svg" alt=""></div>
+                    <div class="catalog_item"><img src="./img/Framerepair.svg" alt=""> Строительство и ремонт <img
+                            class="arrow_rights" src="./img/arrow_right.svg" alt=""></div>
+                    <div class="catalog_item"><img src="./img/Framecars_shop.svg" alt=""> Автотовары <img
+                            class="arrow_rights" src="./img/arrow_right.svg" alt=""></div>
+                    <div class="catalog_item"><img src="./img/Framechildren's.svg" alt=""> Детские товары <img
+                            class="arrow_rights" src="./img/arrow_right.svg" alt=""></div>
+                    <div class="catalog_item"><img src="./img/Framehobby.svg" alt=""> Хобби и творчество <img
+                            class="arrow_rights" src="./img/arrow_right.svg" alt=""></div>
+                    <div class="catalog_item"><img src="./img/Framesport.svg" alt=""> Спорт и отдых <img
+                            class="arrow_rights" src="./img/arrow_right.svg" alt=""></div>
+                    <div class="catalog_item"><img src="./img/Frameproducts.svg" alt=""> Продукты питание <img
+                            class="arrow_rights" src="./img/arrow_right.svg" alt=""></div>
+                    <div class="catalog_item"><img src="./img/Framehygiene.svg" alt=""> Бытовая химия и личная гигиена
+                        <img class="arrow_rights" src="./img/arrow_right.svg" alt=""></div>
+                    <div class="catalog_item"><img src="./img/Framestationery.svg" alt=""> Канцтовары <img
+                            class="arrow_rights" src="./img/arrow_right.svg" alt=""></div>
+                    <div class="catalog_item"><img src="./img/Framezoo.svg" alt=""> Зоотовары <img class="arrow_rights"
+                            src="./img/arrow_right.svg" alt=""></div>
+                    <div class="catalog_item"><img src="./img/Framebooks.svg" alt=""> Книги <img class="arrow_rights"
+                            src="./img/arrow_right.svg" alt=""></div>
+                    <div class="catalog_item"><img src="./img/Framegarden.svg" alt=""> Дача, сад и огород <img
+                            class="arrow_rights" src="./img/arrow_right.svg" alt=""></div>
+                </div>
+                <div class="extra_menu_right"></div>
+                <button class="extra_menu_x"><img src="./img/FrameX.svg" alt=""></button>
             </div>
         </header>
         <main>
@@ -359,11 +406,6 @@
         </main>
 
 
-
-
-
-
-
         <div class="info_the_site">
             <div class="info_the_site_top">
                 <div class="wrap about_us">
@@ -411,7 +453,37 @@
             </div>
         </div>
         <div class="anchor" title="Наверх"><img src="./img/arrow_up.svg" alt=""></div>
+
     </div>
+
+
+    <div class="modal_log_in none">
+        <div class="log_in">
+            <form>
+                <p class="header_log_in">
+                    Введите номер телефона
+                </p>
+                <p class="header_sms">
+                    Отправим смс с кодом подтверждения
+                </p>
+                <div class="div_input">
+                    <div class="code_number">+998</div> 
+                    <input class="input_number" placeholder="00 000-00-00">
+                </div>
+                <button class="get_code">Получить код</button>
+            </form>
+            <div class="log_in_password">
+                Войти по паролю
+            </div>
+            <div class="politic">
+                Авторизуясь, вы соглашаетесь с <a href="">политикой обработки персональных данных</a>
+            </div>
+            <div class="log_in_x">
+                <img src="./img/x.svg" width="18" alt="">
+            </div>
+        </div>
+    </div>
+
 
 
 
