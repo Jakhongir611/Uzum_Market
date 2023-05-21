@@ -173,7 +173,7 @@ fetch('http://localhost:4023/user', {
 let json = JSON.stringify(user)
 console.log(json);
 
-passwordss.value = ""
+password.value = ""
 email.value = ""
 file.value = ""
 photo.src = "./img/avatar.png"
