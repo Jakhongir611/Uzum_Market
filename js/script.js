@@ -37,7 +37,7 @@ let email = doc.querySelector('#email');
 let password = doc.querySelector('#password');
 let file = doc.querySelector('#file');
 let account_photo = doc.querySelector('.account_photo');
-// let 
+let avatar_img = doc.querySelector('.avatar_img');
 // let 
 // let 
 // let 
@@ -158,7 +158,7 @@ log_in_form.addEventListener('submit', (e) => {
     id: Math.floor(Math.random() * 100000000),
     password: password.value,
     email: email.value,
-    file: file.getAttribute('src'),
+    file: file.getAttribute('src')
 }
 console.log(user);
 
@@ -176,15 +176,29 @@ console.log(json);
 password.value = ""
 email.value = ""
 file.value = ""
-photo.src = "./img/avatar.png"
+avatar_img.src = "./img/avatar.png"
 })
 
 
 
+file.onchange = () => {
+  let reader = new FileReader();
+    reader.readAsDataURL(file.files[0]);
+    reader.onload = () => {
+        avatar_img.setAttribute('src', reader.result)
+    }
+}
 
 
 
-
+// file.addEventListener('change', (event) => {
+//   let file = event.target.files[0]
+//   let reader = new FileReader()
+//   reader.onload = () => {
+//     avatar_img.src = reader.result
+//   }
+//   reader.readAsDataURL(file)
+// })
 
 
 
