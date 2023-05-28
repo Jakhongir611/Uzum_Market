@@ -514,10 +514,9 @@
         <div class="log_in">
             <form class="log_in_form">
                 <p class="header_log_in">
-                    Введите email телефона
+                    Регистрация
                 </p>
                 <p class="header_sms">
-                    Отправим код с подтверждением на ваш email
                 </p>
                 <div class="div_input">
                     <!-- <div class="code_number">+998</div> -->
@@ -529,12 +528,32 @@
                     </div>
                 </div>
                 <button type="submit" class="sign_up">Регистрироваться</button>
-                <button type="submit" class="login none">Войти</button>
                 <div class="log_in_password">
                     <p class="login_sign_up">Войти по паролю</p>
-                    <p class="sign_up_login none">Регистрация</p>
                 </div>
                 <div class="log_in_x">
+                    <img src="./img/x.svg" width="18" alt="">
+                </div>
+            </form>
+            
+        </div>
+        <div class="log_up none">
+            <form class="log_up_form">
+                <p class="header_log_in">
+                    Войти
+                </p>
+                <p class="header_sms">
+                </p>
+                <div class="div_input">
+                    <!-- <div class="code_number">+998</div> -->
+                    <input class="input_number" required minlength="10" type="email" placeholder="email" id="email">
+                    <input class="input_number" required minlength="8" type="password" placeholder="password" id="password">
+                </div>
+                <button type="submit" class="login">Войти</button>
+                <div class="log_in_password">
+                    <p class="sign_up_login">Регистрация</p>
+                </div>
+                <div class="log_up_x">
                     <img src="./img/x.svg" width="18" alt="">
                 </div>
             </form>
@@ -545,6 +564,7 @@
 
 
 
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>
 </body>

@@ -1,6 +1,11 @@
+const { default: axios } = require("axios");
+
 let doc = document;
 let body = doc.body;
 let log_in_form = doc.querySelector('.log_in_form');
+let log_up_form = doc.querySelector('.log_up_form');
+let log_in = doc.querySelector('.log_in');
+let log_up = doc.querySelector('.log_up');
 let logo = doc.querySelector('.logo');
 let anchor = doc.querySelector('.anchor');
 let catalog = doc.querySelector('.catalog');
@@ -26,6 +31,7 @@ let catalog_img = doc.querySelector('.catalog_img');
 let sign = doc.querySelector('.sign');
 let modal_log_in = doc.querySelector('.modal_log_in');
 let log_in_x = doc.querySelector('.log_in_x');
+let log_up_x = doc.querySelector('.log_up_x');
 let selected_city = doc.querySelector('.selected_city');
 let my_city_input = doc.querySelector('.my_city_input');
 let sign_up = doc.querySelector('.sign_up');
@@ -109,6 +115,10 @@ log_in_x.addEventListener('click', () => {
   modal_log_in.classList.add('none');
   body.style.overflow = 'auto'
 })
+log_up_x.addEventListener('click', () => {
+  modal_log_in.classList.add('none');
+  body.style.overflow = 'auto'
+})
 
 my_city_input.addEventListener('input', () => {
   let my_city_value = my_city_input.value.trim().toLowerCase();
@@ -138,12 +148,13 @@ anchor.addEventListener('click', (e) => {
   })
 })
 
-log_in_password.addEventListener('click', () => {
-  sign_up.classList.toggle('none');
-  login.classList.toggle('none');
-  sign_up_login.classList.toggle('none');
-  login_sign_up.classList.toggle('none');
-  account_photo.classList.toggle('none');
+login_sign_up.addEventListener('click', () => {
+  log_up.classList.remove('none');
+  log_in.classList.add('none');
+})
+sign_up_login.addEventListener('click', () => {
+  log_up.classList.add('none');
+  log_in.classList.remove('none');
 })
 
 
@@ -153,40 +164,49 @@ log_in_password.addEventListener('click', () => {
 
 log_in_form.addEventListener('submit', (e) => {
   e.preventDefault();
-  
+
   let user = {
     id: Math.floor(Math.random() * 100000000),
-    password: password.value,
     email: email.value,
+    password: password.value,
     file: file.getAttribute('src')
-}
-console.log(user);
+  }
+  console.log(user);
 
-fetch('http://localhost:4023/user', {
+  fetch('http://localhost:6110/user', {
     method: "POST",
     headers: {
-        "Content-Type": "application/json;charset=utf-8"
+      "Content-Type": "application/json;charset=utf-8"
     },
     body: JSON.stringify(user)
+  })
+
+  let json = JSON.stringify(user)
+  console.log(json);
+
+  password.value = ""
+  email.value = ""
+  file.value = ""
+  avatar_img.src = "./img/avatar.png"
 })
 
-let json = JSON.stringify(user)
-console.log(json);
-
-password.value = ""
-email.value = ""
-file.value = ""
-avatar_img.src = "./img/avatar.png"
+log_up_form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  axios.get('http://localhost:6110/user')
+  .then(res => {
+    console.log(res.data);
+  })
+  
 })
 
 
 
 file.onchange = () => {
   let reader = new FileReader();
-    reader.readAsDataURL(file.files[0]);
-    reader.onload = () => {
-        avatar_img.setAttribute('src', reader.result)
-    }
+  reader.readAsDataURL(file.files[0]);
+  reader.onload = () => {
+    avatar_img.setAttribute('src', reader.result)
+  }
 }
 
 
