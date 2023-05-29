@@ -163,6 +163,25 @@
     background: rgba(118, 121, 127, 0.1);
   }
 }
+.container .header_top .account .sign_account {
+  width: 42px;
+  height: 42px;
+  margin-left: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: none;
+  border: none;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.container .header_top .account .sign_account img {
+  width: 100%;
+  height: 100%;
+}
 .container .header_top .account .favorites {
   height: 42px;
   padding: 0 16px 0 8px;

@@ -945,7 +945,7 @@
   ],
   "user": [
     {
-      "id": 1,
+      "id": 17624325,
       "email": "abc@gmail.com",
       "password": "12345678",
       "file": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Rotating_earth_animated_transparent.gif"
@@ -954,13 +954,19 @@
       "id": 72890174,
       "email": "khurramovjahongir611@gmail.com",
       "password": "28062002x",
+      "file": "https://cdn.motor1.com/images/mgl/y2gGx7/s1/1x1/bmw-m5-e39-top-speed-run.webp"
+    },
+    {
+      "id": 79033294,
+      "email": "malikovali718@gmail.com",
+      "password": "wafdsckjalbedscadsxsz",
       "file": null
     },
     {
-      "id": 17635516,
-      "email": "khurramovjahongir611@gmail.com",
-      "password": "28062002",
-      "file": null
+      "id": 19097521,
+      "email": "mishasafarov87@gmail.com",
+      "password": "20102003m",
+      "file": "./img/Rotating_earth_animated_transparent.gif"
     }
   ]
 }

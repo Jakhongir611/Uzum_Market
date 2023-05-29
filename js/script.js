@@ -1,5 +1,3 @@
-const { default: axios } = require("axios");
-
 let doc = document;
 let body = doc.body;
 let log_in_form = doc.querySelector('.log_in_form');
@@ -29,6 +27,7 @@ let catalog_img = doc.querySelector('.catalog_img');
 // let catalog_img_1 = "./img/catalog-icon.png"
 // let catalog_img_2 = "./img/FrameX.svg"
 let sign = doc.querySelector('.sign');
+let sign_account = doc.querySelector('.sign_account');
 let modal_log_in = doc.querySelector('.modal_log_in');
 let log_in_x = doc.querySelector('.log_in_x');
 let log_up_x = doc.querySelector('.log_up_x');
@@ -41,10 +40,11 @@ let login_sign_up = doc.querySelector('.login_sign_up');
 let sign_up_login = doc.querySelector('.sign_up_login');
 let email = doc.querySelector('#email');
 let password = doc.querySelector('#password');
+let email_login = doc.querySelector('#email_login');
+let password_login = doc.querySelector('#password_login');
 let file = doc.querySelector('#file');
 let account_photo = doc.querySelector('.account_photo');
 let avatar_img = doc.querySelector('.avatar_img');
-// let 
 // let 
 // let 
 // let 
@@ -192,22 +192,61 @@ log_in_form.addEventListener('submit', (e) => {
 
 log_up_form.addEventListener('submit', (e) => {
   e.preventDefault();
-  axios.get('http://localhost:6110/user')
-  .then(res => {
-    console.log(res.data);
-  })
-  
-})
+
+  fetch('http://localhost:6110/user')
+    .then(res => res.json())
+    .then(data => {
+      for (let i of data) {
+        if (email_login.value === i.email && password_login.value === i.password) {
+          let modal_window = doc.querySelector('#modal_window');
+          let account = doc.querySelector('#sign_account');
+          sign.classList.add('none');
+          sign_account.classList.remove('none');
+          account.setAttribute('src', i.url);
+          modal_window.classList.add('none');
+          let json = JSON.stringify(i)
+          console.log(json);
+        } else {
+          // Код, который нужно выполнить, если пароль не верен
+        }
+      }
+    });
+});
+
+let uploadButton = doc.getElementById('file')
+let chosenImage = doc.getElementById('avatar_img')
+uploadButton.onchange = () => {
+    let reader = new FileReader();
+    reader.readAsDataURL(uploadButton.files[0]);
+    reader.onload = () => {
+        chosenImage.setAttribute('src', reader.result)
+    }
+    fileName.textContent = uploadButton.files[0].name
+
+// file.onchange = () => {
+//   let reader = new FileReader();
+//   reader.readAsDataURL(file.files[0]);
+//   reader.onload = () => {
+//     avatar_img.setAttribute('src', reader.result)
+//   }
+
+
+// }
 
 
 
-file.onchange = () => {
-  let reader = new FileReader();
-  reader.readAsDataURL(file.files[0]);
-  reader.onload = () => {
-    avatar_img.setAttribute('src', reader.result)
-  }
+
+
 }
+
+
+
+
+
+
+
+
+
 
 
 
