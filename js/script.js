@@ -120,6 +120,23 @@ log_up_x.addEventListener('click', () => {
   body.style.overflow = 'auto'
 })
 
+my_city_input.addEventListener('input', () => {
+  let my_city_value = my_city_input.value.trim().toLowerCase();
+
+  if (my_city_value !== '') {
+    city_title.forEach(item => {
+      const selected_city = item.querySelector('.selected_city');
+      const city_name = selected_city.textContent.toLowerCase();
+
+      if (city_name.includes(my_city_value)) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  } else {
+    city_title.forEach(item => {
+      item.style.display = 'block';
     });
   }
 });
@@ -264,21 +281,3 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
-
-my_city_input.addEventListener('input', () => {
-  let my_city_value = my_city_input.value.trim().toLowerCase();
-
-  if (my_city_value !== '') {
-    city_title.forEach(item => {
-      const selected_city = item.querySelector('.selected_city');
-      const city_name = selected_city.textContent.toLowerCase();
-
-      if (city_name.includes(my_city_value)) {
-        item.style.display = 'block';
-      } else {
-        item.style.display = 'none';
-      }
-    });
-  } else {
-    city_title.forEach(item => {
-      item.style.display = 'block';
