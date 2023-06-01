@@ -120,23 +120,6 @@ log_up_x.addEventListener('click', () => {
   body.style.overflow = 'auto'
 })
 
-my_city_input.addEventListener('input', () => {
-  let my_city_value = my_city_input.value.trim().toLowerCase();
-
-  if (my_city_value !== '') {
-    city_title.forEach(item => {
-      const selected_city = item.querySelector('.selected_city');
-      const city_name = selected_city.textContent.toLowerCase();
-
-      if (city_name.includes(my_city_value)) {
-        item.style.display = 'block';
-      } else {
-        item.style.display = 'none';
-      }
-    });
-  } else {
-    city_title.forEach(item => {
-      item.style.display = 'block';
     });
   }
 });
@@ -222,42 +205,8 @@ uploadButton.onchange = () => {
         chosenImage.setAttribute('src', reader.result)
     }
     fileName.textContent = uploadButton.files[0].name
-
-// file.onchange = () => {
-//   let reader = new FileReader();
-//   reader.readAsDataURL(file.files[0]);
-//   reader.onload = () => {
-//     avatar_img.setAttribute('src', reader.result)
-//   }
-
-
-// }
-
-
-
-
-
 }
 
-
-
-
-
-
-
-
-
-
-
-
-// file.addEventListener('change', (event) => {
-//   let file = event.target.files[0]
-//   let reader = new FileReader()
-//   reader.onload = () => {
-//     avatar_img.src = reader.result
-//   }
-//   reader.readAsDataURL(file)
-// })
 
 
 
@@ -315,3 +264,21 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
+
+my_city_input.addEventListener('input', () => {
+  let my_city_value = my_city_input.value.trim().toLowerCase();
+
+  if (my_city_value !== '') {
+    city_title.forEach(item => {
+      const selected_city = item.querySelector('.selected_city');
+      const city_name = selected_city.textContent.toLowerCase();
+
+      if (city_name.includes(my_city_value)) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  } else {
+    city_title.forEach(item => {
+      item.style.display = 'block';
