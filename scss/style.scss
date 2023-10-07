@@ -159,6 +159,7 @@
                 justify-content: space-between;
                 font-size: 14px;
                 font-weight: 500;
+                position: relative;
 
                 .sign {
                     height: 42px;
@@ -171,6 +172,8 @@
                     gap: 10px;
                     background: none;
                     border: none;
+
+
                 }
 
                 @media (hover: hover) {
@@ -185,7 +188,7 @@
                     }
                 }
 
-                .sign_account{
+                .sign_account {
                     width: 42px;
                     height: 42px;
                     margin-left: 20px;
@@ -199,7 +202,8 @@
                     align-items: center;
                     justify-content: center;
                     overflow: hidden;
-                    img{
+
+                    img {
                         width: 100%;
                         height: 100%;
                     }
@@ -252,6 +256,67 @@
                 @media (hover: none) {
                     .basket:active {
                         background: rgba(118, 121, 127, 0.1);
+                    }
+                }
+
+                .account_info {
+                    width: 150px;
+                    height: 75px;
+                    padding: 10px;
+                    border-radius: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    font-size: 17px;
+                    border: 1.5px solid rgba(0, 0, 0, 0.5);
+                    backdrop-filter: blur(1.5px);
+                    overflow: hidden;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    z-index: 20;
+                    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5) inset;
+                    button{
+                        font-size: 15px;
+                        font-weight: 500;
+                        background: none;
+                        padding: 3px;
+                        border: none;
+                        transition: 200ms;
+                    }
+                    @media (hover: hover) {
+                        .settings:hover {
+                            background: rgba(0, 0, 0, 0.6);
+                            color: rgb(255, 255, 255,);
+                            border-radius: 5px;
+                        transition: 300ms;
+                        }
+                    }
+    
+                    @media (hover: none) {
+                        .settings:active {
+                            background: rgba(0, 0, 0, 0.6);
+                            color: rgb(255, 255, 255,);
+                            border-radius: 5px;
+                        transition: 300ms;
+                        }
+                    }
+                    @media (hover: hover) {
+                        .exit:hover {
+                            background: rgba(0, 0, 0, 0.6);
+                            color: rgb(255, 255, 255,);
+                            border-radius: 5px;
+                        transition: 300ms;
+                        }
+                    }   
+    
+                    @media (hover: none) {
+                        .exit:active {
+                            background: rgba(0, 0, 0, 0.6);
+                            color: rgb(255, 255, 255,);
+                            border-radius: 5px;
+                        transition: 300ms;
+                        }
                     }
                 }
             }
@@ -800,14 +865,17 @@
                 background-color: rgba(118, 121, 127, 0.05);
                 border-radius: 12px;
             }
-            .account_photo{
+
+            .account_photo {
                 display: flex;
-                .avatar{
+
+                .avatar {
                     width: 40px;
                     height: 40px;
                     border-radius: 40px;
                     overflow: hidden;
-                    .avatar_img{
+
+                    .avatar_img {
                         width: 100%;
                         height: 100%;
                         background-position: center;
@@ -815,7 +883,8 @@
                         background-size: contain;
                     }
                 }
-                .ava_file{
+
+                .ava_file {
                     margin: 10px 0 0 18px;
                     outline: 0;
                 }
@@ -833,6 +902,7 @@
             font-weight: 500;
             border-radius: 12px;
         }
+
         .login {
             width: 100%;
             height: 52px;
@@ -864,11 +934,13 @@
             font-size: 15px;
             font-weight: 600;
             cursor: pointer;
-            .login_sign_up{
+
+            .login_sign_up {
                 color: #0070e0;
                 text-decoration: underline;
             }
-            .sign_up_login{
+
+            .sign_up_login {
                 color: #0070e0;
                 text-decoration: underline;
             }
@@ -886,6 +958,7 @@
             }
         }
     }
+
     .log_up {
         width: 415px;
         padding: 32px 32px 45px 32px;
@@ -936,14 +1009,17 @@
                 background-color: rgba(118, 121, 127, 0.05);
                 border-radius: 12px;
             }
-            .account_photo{
+
+            .account_photo {
                 display: flex;
-                .avatar{
+
+                .avatar {
                     width: 40px;
                     height: 40px;
                     border-radius: 40px;
                     overflow: hidden;
-                    .avatar_img{
+
+                    .avatar_img {
                         width: 100%;
                         height: 100%;
                         background-position: center;
@@ -951,7 +1027,8 @@
                         background-size: contain;
                     }
                 }
-                .ava_file{
+
+                .ava_file {
                     margin: 10px 0 0 18px;
                     outline: 0;
                 }
@@ -969,6 +1046,7 @@
             font-weight: 500;
             border-radius: 12px;
         }
+
         .login {
             width: 100%;
             height: 52px;
@@ -1000,11 +1078,13 @@
             font-size: 15px;
             font-weight: 600;
             cursor: pointer;
-            .login_sign_up{
+
+            .login_sign_up {
                 color: #0070e0;
                 text-decoration: underline;
             }
-            .sign_up_login{
+
+            .sign_up_login {
                 color: #0070e0;
                 text-decoration: underline;
             }
@@ -1025,6 +1105,28 @@
 }
 
 
+.change_window{
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #00000047;
+    .modal_change{
+        width: 415px;
+        padding: 32px;
+        background: #fff;
+        box-shadow: 0px 0px 15px 9px rgba(34, 60, 80, 0.238);
+        position: relative;
+        border-radius: 8px;
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+    }
+}
 
 
 
