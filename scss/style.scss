@@ -424,6 +424,155 @@
                 font-size: 28px;
             }
 
+            .products_pc {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                column-gap: 20px;
+                row-gap: 25px;
+                margin-top: 20px;
+
+                .product {
+                    width: 232px;
+                    height: 455px;
+                    display: flex;
+                    flex-direction: column;
+                    border-radius: 8px;
+                    overflow: hidden;
+
+                    &_photo {
+                        width: 100%;
+                        height: 310px;
+                        position: relative;
+                        border-radius: 8px;
+                        overflow: hidden;
+
+                        .prodect_img {
+                            width: 232px;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: cover;
+                            transition: 300ms;
+                        }
+
+
+                        .like {
+                            width: 20px;
+                            height: 20px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            position: absolute;
+                            top: 16px;
+                            right: 12px;
+                            background: rgba(0, 0, 0, 0);
+                            border: none;
+                        }
+                    }
+
+                    &_info {
+                        width: 100%;
+                        height: 145px;
+                        padding: 10px;
+                        display: flex;
+                        flex-direction: column;
+
+                        .name_product {
+                            width: 100%;
+                            height: 31px;
+                            font-size: 12.8px;
+                            font-weight: 400;
+                            overflow: hidden;
+                        }
+
+                        .estimates {
+                            margin-top: 5px;
+                            font-size: 11.2px;
+                            font-weight: 300;
+                            color: #8A8D93;
+                            display: flex;
+                        }
+
+                        .price_installment {
+                            width: fit-content;
+                            height: 17px;
+                            margin-top: 10px;
+                            padding: 0 5px;
+                            background: yellow;
+                            border-radius: 5px;
+                            font-weight: 400;
+                            font-size: 11px;
+                        }
+
+                        .product_price {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            margin-top: auto;
+
+                            .price {
+                                display: flex;
+                                flex-direction: column;
+                                font-weight: 400;
+                                font-size: 11.2px;
+                                color: #757575;
+                                text-decoration: line-through;
+                            }
+
+                            .promo {
+                                font-weight: 500;
+                                font-size: 14px;
+                            }
+
+                            .busket_plus {
+                                width: 32px;
+                                height: 32px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                background: none;
+                                border-radius: 50px;
+                                border: 1px solid #D0D2D9;
+                            }
+
+                            @media (hover: hover) {
+                                .busket_plus:hover {
+                                    background: #e9ebf0;
+                                    border: 1px solid #929398;
+                                }
+                            }
+
+                            @media (hover: none) {
+                                .busket_plus:active {
+                                    background: #e9ebf0;
+                                    border: 1px solid #929398;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .product:hover {
+                    .prodect_img {
+                        transform: scale(1.05);
+                        // transition: 300ms;
+                    }
+                }
+
+                @media (hover: hover) {
+                    .product:hover {
+                        box-shadow: 0px 5px 10px -5px rgb(173 173 173 / 62%);
+                    }
+                }
+
+                @media (hover: none) {
+                    .product:active {
+                        box-shadow: 0px 5px 10px -5px rgb(173 173 173 / 62%);
+                    }
+                }
+            }
+
             .products {
                 width: 100%;
                 height: 100%;
@@ -491,6 +640,7 @@
                             font-size: 11.2px;
                             font-weight: 300;
                             color: #8A8D93;
+                            display: flex;
                         }
 
                         .price_installment {
@@ -573,6 +723,7 @@
             }
 
 
+            
 
 
 
