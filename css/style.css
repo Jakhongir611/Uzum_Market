@@ -393,6 +393,14 @@
   height: 310px;
   position: relative;
   border-radius: 8px;
+  overflow: hidden;
+}
+.container main .eid .products .product_photo .prodect_img {
+  width: 232px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: 300ms;
 }
 .container main .eid .products .product_photo .like {
   width: 20px;
@@ -476,6 +484,9 @@
     background: #e9ebf0;
     border: 1px solid #929398;
   }
+}
+.container main .eid .products .product:hover .prodect_img {
+  transform: scale(1.05);
 }
 @media (hover: hover) {
   .container main .eid .products .product:hover {
