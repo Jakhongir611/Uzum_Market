@@ -45,10 +45,13 @@ let password_login = doc.querySelector('#password_login');
 let file = doc.querySelector('#file');
 let account_photo = doc.querySelector('.account_photo');
 let avatar_img = doc.querySelector('.avatar_img');
-// let 
-// let 
-// let 
-// let 
+let electronics = doc.querySelector('.electronics');
+let tel_pc = doc.querySelector('.tel_pc');
+let phone = doc.querySelector('.phone');
+let computer = doc.querySelector('.computer');
+let products = doc.querySelector('.products');
+let products_pc = doc.querySelector('.products_pc');
+let text = doc.querySelector('.razdel');
 
 
 location_span.addEventListener('click', () => {
@@ -96,7 +99,7 @@ menu_more.addEventListener('click', () => {
   // catalog_img.src = catalog_img_2;
 })
 catalog.addEventListener('click', () => {
-  extra_menu.classList.remove('none');
+  extra_menu.classList.toggle('none');
   header_bottom.classList.add('none');
   // catalog_img.src = catalog_img_2;
 })
@@ -227,9 +230,25 @@ uploadButton.onchange = () => {
 
 
 
-
-
-
+electronics.addEventListener('click', () => {
+  tel_pc.classList.remove('none');
+})
+phone.addEventListener('click', () => {
+  products.classList.remove('none');
+  tel_pc.classList.add('none');
+  extra_menu.classList.add('none');
+  phone.classList.add('color');
+  computer.classList.remove('color');
+  text.textContent = 'Смартфоны'
+})
+computer.addEventListener('click', () => {
+  products_pc.classList.remove('none');
+  tel_pc.classList.add('none');
+  extra_menu.classList.add('none');
+  computer.classList.add('color');
+  phone.classList.remove('color');
+  text.textContent = 'Компьютеры'
+})
 
 
 
